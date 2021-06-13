@@ -1,0 +1,1428 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ACE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Place favicon.ico in the root directory -->
+    <!--
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    -->
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href={{ url_for('static',filename='home/images/favicon.ico') }}>
+    <link rel="apple-touch-icon" type="image"
+          href={{ url_for('static',filename='home/apple-touch-icon.png') }}>
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/bootstrap.min.css') }}>
+
+    <!-- Owl Carousel main css -->
+    <!--<link rel="stylesheet" href="css/owl.carousel.min.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/owl.carousel.min.css') }}>
+
+
+    <!--<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/owl.theme.default.min.css') }}>
+
+    <!-- This core.css file contents all plugings css file. -->
+    <!--<link rel="stylesheet" href="css/core.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/core.css') }}>
+
+
+    <!-- Theme shortcodes/elements style -->
+    <!--<link rel="stylesheet" href="css/shortcode/shortcodes.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/shortcode/shortcodes.css') }}>
+
+    <!-- Theme main style -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/style.css') }}>
+
+    <!-- Responsive css -->
+    <!--<link rel="stylesheet" href="css/responsive.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/responsive.css') }}>
+
+    <!-- User style -->
+    <!--<link rel="stylesheet" href="css/custom.css">-->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/custom.css') }}>
+
+    <!-- Modernizr JS -->
+    <script src="static/home/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 bg__white">
+            <style>
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    right: 0;
+   display: none;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.myHref:hover{
+    color: red;
+}
+</style>
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="/index">
+                                    <img class="w3-animate-left" src="static/images/ace-logo.png" style="width: 130px" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6 w3-animate-right">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="/index" style="color: red;">Home</a></li>
+                                    <li class="drop"><a href="/men">Men</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/men#jump-men-casual">Casual <span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">T-Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pants</a>
+                                                    <a href="">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="/men#jump-men-formal">Formal<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shalwar Kameez</a>
+                                                    <a href="">
+                                                        <img src="static/images/menShalwarKameezCover.jpg" style="width: 120px; height: 160px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pant Coat</a>
+                                                    <a href="">
+                                                        <img src="static/images/menPentCoatCover.jpg" style="width: 120px; height: 160px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="/women">Women</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/women#jump-women-shalwar-kameez">Shalwar Kameez<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Two Piece</a>
+                                                    <a href="">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Three Piece</a>
+                                                    <a href="">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/women#jump-women-abaya">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="/kids">Kids</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/kids#jump-kids-boys">Boys<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pants</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Kurta & Pajama</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/kids#jump-kids-girls">Girls<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Kurti</a>
+                                                    <a href="">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Jeans</a>
+                                                    <a href="">
+                                                        <img src="static/images/girlsJeansCover.jpg" style="width: 130px; height: 170px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                    <li class="drop"><a href="index.html">Home</a></li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Men</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Casual</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">T-Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pants</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="drop"><a href="single-portfolio.html">Formal</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shalwar Kameez</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShalwarKameezCover.jpg" style="width: 120px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pent Coat</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCoatCover.jpg" style="width: 130px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Women</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Shalwar Kameez</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Two Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Three Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="single-portfolio.html">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Kids</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Boys</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pents</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Kurta & Pajama</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li class="drop"><a href="single-portfolio.html">Girls</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Kurti</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Jeans</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsJeansCover.jpg" style="width: 130px; height: 170px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- End MAinmenu Ares -->
+
+                        <div  class="col-md-2 col-sm-4 col-xs-3 w3-animate-right">
+                            <ul class="menu-extra">
+                                <div class="dropdown" style="padding: 0">
+<li class="dropbtn" onclick="myFunction1()">
+    {%if login_email  %}
+        <span class="ti-user"></span>
+    {%endif  %}
+
+    {%if not_login  %}
+        <a href="/login-register"><span class="ti-user"></span></a>
+    {%endif  %}
+
+    <div class="dropdown-content" id="text1">
+        <a>{{login_email}}</a>
+        <a class="myHref" href="/user-profile">
+            <i class="zmdi zmdi-account"></i>
+            <i class="zmdi zmdi-account" style="visibility: hidden"></i>
+            Account
+        </a>
+        <a class="myHref" href="/user-setting">
+            <i class="zmdi zmdi-settings"></i>
+            <i class="zmdi zmdi-settings" style="visibility: hidden"></i>
+            Setting
+        </a>
+        <a class="myHref" href="/logout">
+            <i class="zmdi zmdi-power"></i>
+            <i class="zmdi zmdi-power" style="visibility: hidden"></i>
+            Logout
+        </a>
+    </div>
+</li>
+                                </div>
+                                <li class="cart__menu" style="visibility: hidden; padding: 0"><span class="ti-shopping-cart"></span></li>
+                                <li  style="padding: 0">
+                                    {%if login_email  %}
+                                        <a href="/cart"><span class="ti-shopping-cart"></span></a>
+                                    {%endif  %}
+
+                                    {%if not_login  %}
+                                        <a href="/login-register-cart-view"><span class="ti-shopping-cart"></span></a>
+                                    {%endif  %}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {%if login_email  %}
+        <script>
+    function myFunction1() {
+         var x = document.getElementById("text1");
+         if (x.style.display === "block") {
+             x.style.display = "none";
+         } else {
+             x.style.display = "block";
+         }
+    }
+</script>
+    {%endif  %}
+
+                    <div class="mobile-menu-area">
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Style -->
+        
+        <div class="body__overlay"></div>
+        <!-- Start Offset Wrapper -->
+        <div class="offset__wrapper">
+            <!-- Start Search Popap -->
+            <div class="search__area">
+                <div class="container" >
+                    <div class="row" >
+                        <div class="col-md-12" >
+                            <div class="search__inner">
+                                <form action="#" method="get">
+                                    <input placeholder="Search here... " type="text">
+                                    <button type="submit"></button>
+                                </form>
+                                <div class="search__close__btn">
+                                    <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Popap -->
+            <!-- Start Cart Panel -->
+
+            <!-- End Cart Panel -->
+        </div>
+        <!-- End Offset Wrapper -->
+        <!-- Start Feature Product -->
+
+        {%if order_msg  %}
+            <div class="alert alert-success" role="alert">
+                <strong>Order Confirmation!</strong> Your order is confirmed
+            </div>
+        {%endif  %}
+
+        <section class="categories-slider-area bg__white">
+            <div class="container">
+                <div class="row">
+                    <!-- Start Left Feature -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 float-left-style w3-animate-opacity">
+                        <!-- Start Slider Area -->
+                        <div class="slider__container slider--one">
+                            <div class="slider__activation__wrap owl-carousel owl-theme">
+                                <!-- Start Single Slide -->
+
+                                <div class="slide slider__full--screen slider-height-inherit slider-text-right" style="background: rgba(0, 0, 0, 0) url(https://cdn.shopify.com/s/files/1/0551/9763/0638/files/MTJ_22_April_WebBanner_05.png?v=1619256075) no-repeat scroll center center / cover ;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-10 col-lg-7 col-md-offset-2 col-lg-offset-0 col-sm-12 col-xs-12">
+                                                <div class="slider__inner">
+                                                    <h1 style="color: #F20000">Men Collection</h1>
+                                                    <div class="slider__btn">
+                                                        <a class="htc__btn" href="/men" style="color: #EEEEEE"><b>View Details</b></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Slide -->
+                                <!-- Start Single Slide -->
+                                <div class="slide slider__full--screen slider-height-inherit  slider-text-left" style="background: rgba(0, 0, 0, 0) url(https://cdn.shopify.com/s/files/1/0551/9763/0638/files/MTJ_22_April_WebBanner_08.png?v=1620138957) no-repeat scroll center center / cover ;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                                                <div class="slider__inner">
+                                                    <h1 style="color: #F20000">Women<br> Collection</h1>
+                                                    <div class="slider__btn">
+                                                        <a class="htc__btn" style="color: black" href="/women"><b>View Details</b></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide slider__full--screen slider-height-inherit  slider-text-right" style="background: rgba(0, 0, 0, 0) url(https://www.madinaclothandgiftstop.com/wp-content/uploads/2021/01/30b8deabe4_location-banner-4-website-banners_2500x1080-k2k-2020.jpg) no-repeat scroll center center / cover ;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-10 col-lg-7 col-md-offset-0 col-lg-offset-4 col-sm-12 col-xs-12">
+                                                <div class="slider__inner">
+                                                    <h1 style="color: #F20000">Kids Collection</h1>
+                                                    <div class="slider__btn">
+                                                        <a class="htc__btn" style="color: black" href="/kids"><b>View Details</b></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Slide -->
+                            </div>
+                        </div>
+                        <!-- Start Slider Area -->
+                    </div>
+
+                    <!-- End Left Feature -->
+                </div>
+            </div>
+        </section>
+        <!-- End Feature Product -->
+
+
+        <!--<div class="only-banner ptb--100 bg__white">
+
+            <div class="container">
+
+            </div>
+
+        </div>-->
+        <!-- Start Our Product Area -->
+        <style>
+            #MYwhite1 {
+              background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8ecc279296077.5cbf10682f98d.jpg');
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+            }
+        </style>
+
+        <section class="htc__product__area bg__white">
+            <div class="container"  id="MYwhite1">
+                <div class="row" style="background-color: transparent">
+                    <div class="col-md-12">
+                        <div class="product-style-tab">
+                            <div class="product-tab-list" style="text-align:center ;border:none">
+                                <ul class="tab-style" role="tablist">
+                                    <li class="active">
+                                        <h3 style="text-align: center;font-size: 60px;color: white" ><b>Men Collection</b></h3>
+                                    </li>
+                                </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+                    <!--<a href="shop-sidebar.html"><img class="w3-animate-opacity w3-grayscale-min" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8ecc279296077.5cbf10682f98d.jpg" style="height: 490px" alt="new product">
+                    </a>-->
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" >
+                        <div class="product-style-tab">
+
+                            <div class="product-tab-list" style="background-color: white;border: 1px solid #F20000; border-right: none; border-left: none">
+                                <!-- Nav tabs -->
+
+                                <ul class="tab-style" role="tablist" >
+                                    <li class="active">
+                                        <button type="button" data-toggle="tab" onclick="menLatestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>latest</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-toggle="tab" onclick="menBestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>best sale</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li style="alignment: right">
+                                        <a href="" data-toggle="tab">
+                                            <div class="tab-menu-text">
+                                                <h4><a href="/men">View All Variety</a></h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <style>
+                                 .my-cart1:hover{
+                                    color:red;
+                                 }
+                            </style>
+                            <style>
+    /*
+      Rollover Image
+     */
+    .figure {
+        position: relative;
+    }
+    .figure img.image-hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      object-fit: initial;
+      opacity: 0;
+        transition: 0.8s;
+    }
+    .figure:hover img.image-hover {
+      opacity: 1;
+    }
+</style>
+
+                            <div class="tab-content another-product-style jump" id="men-latest" style="display: block">
+                                <div class="tab-pane active">
+                                    <div class="row">
+
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in menLatest %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="menLatest" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="menLatest">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-content another-product-style jump" id="men-best-sale" style="display: none">
+
+                                <div class="tab-pane active">
+                                    <div class="row">
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in menBestSale %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="menBestSale" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="menBestSale">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- End Our Product Area -->
+        <!--<div class="only-banner ptb--100 bg__white" style="visibility: hidden">
+            <div class="container">
+                <div class="only-banner-img">
+                    <a href="shop-sidebar.html"><img src="https://image.freepik.com/free-photo/female-legs-jeans-sneakers-white-top-view_175682-974.jpg" style="width: 100%; height: 500px" alt="new product"></a>
+                </div>
+            </div>
+        </div>-->
+        <!-- Start Our Product Area -->
+        <style>
+            #MYwhite2 {
+              background-image: url('https://image.freepik.com/free-photo/stack-jeans-wooden-background_169016-3643.jpg');
+
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+            }
+        </style>
+
+
+        <div class="only-banner ptb--100 bg__white" style="background-color: white">
+            <div class="container">
+
+            </div>
+        </div>
+
+            <section class="htc__product__area bg__white">
+            <div class="container"  id="MYwhite2">
+                <!--#7D7D7D-->
+                <div class="row" style="background-color: transparent">
+                    <div class="col-md-12">
+                        <div class="product-style-tab">
+                            <div class="product-tab-list" style="text-align:center ;border:none">
+                                <ul class="tab-style" role="tablist">
+                                    <li class="active">
+                                        <h3 style="text-align: center;font-size: 60px;color: white" ><b>Women Collection</b></h3>
+                                    </li>
+                                </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+                    <!--<a href="shop-sidebar.html"><img class="w3-animate-opacity w3-grayscale-min" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8ecc279296077.5cbf10682f98d.jpg" style="height: 490px" alt="new product">
+                    </a>-->
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" >
+                        <div class="product-style-tab">
+
+                            <div class="product-tab-list" style="background-color: white;border: 1px solid #F20000; border-right: none; border-left: none">
+                                <!-- Nav tabs -->
+
+                                <ul class="tab-style" role="tablist" >
+                                    <li class="active">
+                                        <button type="button" data-toggle="tab" onclick="womenLatestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>latest</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-toggle="tab" onclick="womenBestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>best sale</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li style="alignment: right">
+                                        <a href="" data-toggle="tab">
+                                            <div class="tab-menu-text">
+                                                <h4><a href="/women">View All Variety</a></h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="tab-content another-product-style jump" id="women-latest" style="display: block">
+                                <div class="tab-pane active">
+                                    <div class="row">
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in womenLatest %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="womenLatest" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="womenLatest">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-content another-product-style jump" id="women-best-sale" style="display: none">
+                                <div class="tab-pane active">
+                                    <div class="row">
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in womenBestSale %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="womenBestSale" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="womenBestSale">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <style>
+            #MYwhite3 {
+              background-image: url('https://image.freepik.com/free-photo/closeup-shot-young-boy-green-coat-striped-shirt-hat-wooden-background_181624-28644.jpg');
+
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+            }
+        </style>
+
+            <div class="only-banner ptb--100 bg__white" style="background-color: white">
+            <div class="container">
+
+            </div>
+        </div>
+
+            <section class="htc__product__area bg__white">
+            <div class="container" id="MYwhite3" >
+                <div class="row" style="background-color: transparent">
+                    <div class="col-md-12">
+                        <div class="product-style-tab">
+                            <div class="product-tab-list" style="text-align:center ;border:none">
+                                <ul class="tab-style" role="tablist">
+                                    <li class="active">
+                                        <h3 style="text-align: center;font-size: 60px;color: white" ><b>Kids Collection</b></h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a href="shop-sidebar.html"><img class="w3-animate-opacity w3-grayscale-min" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8ecc279296077.5cbf10682f98d.jpg" style="height: 490px" alt="new product">
+                    </a>-->
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" >
+                        <div class="product-style-tab">
+
+                            <div class="product-tab-list" style="background-color: white;border: 1px solid #F20000; border-right: none; border-left: none">
+                                <!-- Nav tabs -->
+
+                                <ul class="tab-style" role="tablist" >
+                                    <li class="active">
+                                        <button type="button" data-toggle="tab" onclick="kidsLatestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>latest</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-toggle="tab" onclick="kidsBestFunction()" style="background-color: transparent;border-color: transparent;border: 0;border-width: 0;">
+                                            <div class="tab-menu-text">
+                                                <h4>best sale</h4>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li style="alignment: right">
+                                        <a href="" data-toggle="tab">
+                                            <div class="tab-menu-text">
+                                                <h4><a href="/kids">View All Variety</a></h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="tab-content another-product-style jump" id="kids-latest" style="display: block">
+                                <div class="tab-pane active">
+                                    <div class="row">
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in kidsLatest %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="kidsLatest" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="kidsLatest">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-content another-product-style jump" id="kids-best-sale" style="display: none">
+
+
+                                <div class="tab-pane active">
+                                    <div class="row">
+                                        <div class="product-slider-active owl-carousel">
+                                            <!--This is for the for loop of new items-->
+
+                                            {% for u in kidsBestSale %}
+
+                                            <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <div class="product__inner">
+                                                        <div class="pro__thumb">
+
+                                                        <div class="figure">
+                                                            <img class="Sirv image-main" src="{{u[2]}}" width="270" height="305">
+                                                            <img class="Sirv image-hover" data-src="{{u[8]}}" width="270" height="305">
+                                                        </div>
+
+                                                        </div>
+                                                        <div class="product__hover__info">
+                                                            <iframe name="kidsBestSale" style="display: none"></iframe>
+                                                            <ul class="product__action">
+                                                                <li>
+                                                                    <form action="/view-product-detail" method="POST">
+                                                                        <button name="product-id" value="{{ u[0] }}" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-eye"></span></button>
+                                                                    </form>
+                                                                </li>
+
+                                                                <li>
+                                                                    {%if login_email  %}
+                                                                        <form action="/place-order" method="POST" target="kidsBestSale">
+                                                                            <button name="product-id" value="{{ u[0] }}" data-toggle="modal" data-target="#myModal" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+
+                                                                    {%if not_login  %}
+                                                                        <form action="/login-register-add-item">
+                                                                            <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;font-size: 20px" class="my-cart1"><span class="ti-shopping-cart"></span></button>
+                                                                        </form>
+                                                                    {%endif  %}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product__details" style="background-color: white">
+                                                        <h2><a href="product-details.html" >{{ u[1] }}</a></h2>
+                                                        <ul class="product__price">
+                                                            <li class="price" >PKR {{ u[3] }}</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </section>
+
+            <div class="only-banner ptb--50 bg__white" style="background-color: white">
+            <div class="container">
+
+            </div>
+        </div>
+        <!-- Start Our Product Area -->
+
+        <!-- End Our Product Area -->
+        <!-- Start Blog Area -->
+
+        <!-- End Blog Area -->
+        <!-- Start Footer Area -->
+
+        <footer class="htc__footer__area gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="footer__container clearfix">
+                         <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-4 col-sm-6">
+                            <div class="ft__widget">
+                                <div class="ft__logo">
+                                    <h2>Need Help</h2>
+                                </div>
+                                <div class="footer-address">
+                                    <ul>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-pin"></i>
+                                            </div>
+                                            <div class="address-text">
+                                                <p>{{company.address}}</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-email"></i>
+                                            </div>
+                                            <div class="address-text">
+                                            <p>{{company.email}}</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-phone-in-talk"></i>
+                                            </div>
+                                            <div class="address-text">
+                                                <p>{{company.phone}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-2 col-sm-6 smt-30 xmt-30">
+                            <div class="ft__widget">
+                                <h2 class="ft__title">Categories</h2>
+                                <ul class="footer-categories">
+                                    <li><a href="/men">Men</a></li>
+                                    <li><a href="/women">Women</a></li>
+                                    <li><a href="/kids">Kids</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Start Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-2 col-lg-offset-1 col-sm-6 smt-30 xmt-30">
+                            <div class="ft__widget">
+                                <h2 class="ft__title">Follow Us</h2>
+                                <ul class="social__icon">
+                                    <li><a href="https://twitter.com/usmanjavaid08?s=09"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/usman_javaid01/"><i class="zmdi zmdi-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/offical.usman.005/"><i class="zmdi zmdi-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                    </div>
+                </div>
+                <!-- Start Copyright Area -->
+                <div class="htc__copyright__area">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="copyright__inner">
+                                <div class="copyright">
+                                    <p>© 2021 <a href="/index">ACE</a>
+                                    All Right Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Copyright Area -->
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+    </div>
+    <!-- Body main wrapper end -->
+    <!-- QUICKVIEW PRODUCT -->
+        <div id="quickview-wrapper">
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal__container" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-product">
+                            <!-- Start product images -->
+                            <div class="product-images">
+                                <div class="main-image images">
+                                    <img alt="big images" src="static/home/images/product/big-img/1.jpg">
+                                </div>
+                            </div>
+                            <!-- end product images -->
+                            <div class="product-info">
+                                <h1>Simple Fabric Bags</h1>
+                                <div class="rating__and__review">
+                                    <ul class="rating">
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                    </ul>
+                                    <div class="review">
+                                        <a href="#">4 customer reviews</a>
+                                    </div>
+                                </div>
+                                <div class="price-box-3">
+                                    <div class="s-price-box">
+                                        <span class="new-price">$17.20</span>
+                                        <span class="old-price">$45.00</span>
+                                    </div>
+                                </div>
+                                <div class="quick-desc">
+                                    Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
+                                </div>
+                                <div class="select__color">
+                                    <h2>Select color</h2>
+                                    <ul class="color__list">
+                                        <li class="red"><a title="Red" href="#">Red</a></li>
+                                        <li class="gold"><a title="Gold" href="#">Gold</a></li>
+                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
+                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
+                                    </ul>
+                                </div>
+                                <div class="select__size">
+                                    <h2>Select size</h2>
+                                    <ul class="color__list">
+                                        <li class="l__size"><a title="L" href="#">L</a></li>
+                                        <li class="m__size"><a title="M" href="#">M</a></li>
+                                        <li class="s__size"><a title="S" href="#">S</a></li>
+                                        <li class="xl__size"><a title="XL" href="#">XL</a></li>
+                                        <li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
+                                    </ul>
+                                </div>
+                                <div class="social-sharing">
+                                    <div class="widget widget_socialsharing_widget">
+                                        <h3 class="widget-title-modal">Share this product</h3>
+                                        <ul class="social-icons">
+                                            <li><a target="_blank" title="rss" href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
+                                            <li><a target="_blank" title="Linkedin" href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
+                                            <li><a target="_blank" title="Pinterest" href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                            <li><a target="_blank" title="Tumblr" href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
+                                            <li><a target="_blank" title="Pinterest" href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="addtocart-btn">
+                                    <a href="#">Add to cart</a>
+                                </div>
+                            </div><!-- .product-info -->
+                        </div><!-- .modal-product -->
+                    </div><!-- .modal-body -->
+                </div><!-- .modal-content -->
+            </div><!-- .modal-dialog -->
+        </div>
+        <!-- END Modal -->
+        </div>
+    <!-- END QUICKVIEW PRODUCT -->
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- jquery latest version -->
+    <script src="static/home/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="static/home/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="static/home/js/plugins.js"></script>
+    <script src="static/home/js/slick.min.js"></script>
+    <script src="static/home/js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="static/home/js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="static/home/js/main.js"></script>
+    <script>
+        function menLatestFunction() {
+            document.getElementById("men-latest").style.display = "block";
+            document.getElementById("men-best-sale").style.display = "none";
+        }
+        function menBestFunction() {
+            document.getElementById("men-latest").style.display = "none";
+            document.getElementById("men-best-sale").style.display = "block";
+        }
+        function womenLatestFunction() {
+            document.getElementById("women-latest").style.display = "block";
+            document.getElementById("women-best-sale").style.display = "none";
+        }
+        function womenBestFunction() {
+            document.getElementById("women-latest").style.display = "none";
+            document.getElementById("women-best-sale").style.display = "block";
+        }
+        function kidsLatestFunction() {
+            document.getElementById("kids-latest").style.display = "block";
+            document.getElementById("kids-best-sale").style.display = "none";
+        }
+        function kidsBestFunction() {
+            document.getElementById("kids-latest").style.display = "none";
+            document.getElementById("kids-best-sale").style.display = "block";
+        }
+    </script>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <p class="success">Item Added to Cart Successfully!</p>
+      </div>
+      <div class="modal-footer">
+          <a href="/cart" class="btn btn-default">View Cart</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+
+</html>

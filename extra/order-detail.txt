@@ -1,0 +1,23 @@
+@app.route('/user-order')
+def userOrder():
+    login_email = request.cookies.get("email")
+    txt = "SELECT user.email,first_name,last_name,orderdetail_datetime,orderdetail_status,sum(order_quantity) FROM firstdatabase.orderdetail,firstdatabase.order,firstdatabase.user,firstdatabase.product where user.user_id=orderdetail.user_id and order.order_id=orderdetail.order_id and product.product_id=order.product_id and user.email=%s group by orderdetail_datetime order by orderdetail_datetime desc"
+    table = db.showTableOne(txt, login_email)
+    txt = "SELECT sum(order.order_quantity*product.product_price) FROM firstdatabase.orderdetail,firstdatabase.user, firstdatabase.order,firstdatabase.product where orderdetail.user_id=user.user_id and order.order_id=orderdetail.order_id and order.product_id=product.product_id and user.email=%s group by orderdetail_datetime order by orderdetail_datetime desc"
+    totalAmount = db.showTableOne(txt, login_email)
+    tables = numpy.concatenate((table, totalAmount), axis=1)
+
+    response = make_response(render_template('user-order.html', table=tables))
+    return response
+
+@app.route('/user-order-detail', methods=['GET','POST'])
+def userOrderDetail():
+    email = request.form["user-email"]
+    dateTime = request.form["orderdetail-datetime"]
+    txt = "SELECT @ab:=@ab+1 as SrNo,product.product_id,product.product_title,product.product_size,order.order_quantity,product.product_price,order.order_quantity*product.product_price as TOTAL FROM firstdatabase.orderdetail,firstdatabase.user, firstdatabase.order,firstdatabase.product, (SELECT @ab:= 0) AS ab where orderdetail.user_id=user.user_id and order.order_id=orderdetail.order_id and order.product_id=product.product_id and user.email=%s and orderdetail_datetime=%s"
+    table = db.showTableTwo(txt, email, dateTime)
+    txt = "SELECT sum(order.order_quantity*product.product_price) FROM firstdatabase.orderdetail,firstdatabase.user, firstdatabase.order,firstdatabase.product where orderdetail.user_id=user.user_id and order.order_id=orderdetail.order_id and order.product_id=product.product_id and user.email=%s and orderdetail_datetime=%s"
+    totalAmount = db.showTableTwo(txt, email, dateTime)
+
+    response = make_response(render_template('user-order-detail.html', table=table, totalAmount=totalAmount[0][0]))
+    return response

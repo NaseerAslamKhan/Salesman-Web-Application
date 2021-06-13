@@ -1,0 +1,84 @@
+CREATE TABLE `firstdatabase`.`bag` (
+  `bag_id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `product_id` INT NOT NULL,
+  `bag_quantity` INT NOT NULL,
+  PRIMARY KEY (`bag_id`),
+  INDEX `user_id_idx` (`user_id` ASC) VISIBLE,
+  INDEX `product_id_idx` (`product_id` ASC) VISIBLE,
+  CONSTRAINT `user_ids`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `firstdatabase`.`user` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `product_ids`
+    FOREIGN KEY (`product_id`)
+    REFERENCES `firstdatabase`.`product` (`product_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `firstdatabase`.`orderdetail` (
+  `orderdetail_id` INT NOT NULL AUTO_INCREMENT,
+  `orderdetail_datetime` DATETIME NOT NULL,
+  `order_id` INT NOT NULL,
+  `user_id` INT NOT NULL,
+  `orderdetail_status` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`orderdetail_id`),
+  INDEX `user_id_idx` (`user_id` ASC) VISIBLE,
+  INDEX `order_id_idx` (`order_id` ASC) VISIBLE,
+  CONSTRAINT `user_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `firstdatabase`.`user` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `order_id`
+    FOREIGN KEY (`order_id`)
+    REFERENCES `firstdatabase`.`order` (`order_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+CREATE TABLE `firstdatabase`.`order` (
+  `order_id` INT NOT NULL AUTO_INCREMENT,
+  `order_quantity` INT NOT NULL,
+  `product_id` INT NOT NULL,
+  PRIMARY KEY (`order_id`),
+  INDEX `product_id_idx` (`product_id` ASC) VISIBLE,
+  CONSTRAINT `product_id`
+    FOREIGN KEY (`product_id`)
+    REFERENCES `firstdatabase`.`product` (`product_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+CREATE TABLE `firstdatabase`.`user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `email_status` VARCHAR(45) NOT NULL,
+  `account_status` VARCHAR(45) NOT NULL,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(45) NOT NULL,
+  `date_of_birth` DATE NOT NULL,
+  `gender` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+CREATE TABLE `firstdatabase`.`product` (
+  `product_id` INT NOT NULL AUTO_INCREMENT,
+  `product_title` VARCHAR(45) NOT NULL,
+  `product_img` VARCHAR(45) NOT NULL,
+  `product_price` INT NOT NULL,
+  `product_quantity` INT NOT NULL,
+  `product_category` VARCHAR(45) NOT NULL,
+  `product_size` VARCHAR(45) NOT NULL,
+  `product_status` VARCHAR(45) NOT NULL,
+  `product_desc` VARCHAR(255) NULL,
+  PRIMARY KEY (`product_id`),
+  UNIQUE INDEX `product_title_UNIQUE` (`product_title` ASC) VISIBLE);
+
+
+foreign key name different

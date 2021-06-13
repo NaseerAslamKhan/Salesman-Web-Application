@@ -1,0 +1,571 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+
+    <!-- Title Page-->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-face.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/font-awesome-5/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/bootstrap-4.1/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/animsition/animsition.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/wow/animate.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='vendor/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/theme.css') }}">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Company</title>
+{% endblock %}
+
+{% block body %}
+<style>
+    .register{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 1% 1%;
+    border-bottom-left-radius: 1% 1%;
+    border-bottom-right-radius: 1% 1%;
+    border-top-right-radius: 1% 1%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.btnRegister{
+    float: right;
+    border: none;
+    border-radius: 1rem;
+    padding: 1%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 30%;
+    cursor: pointer;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+</style>
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+    <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="#">
+                            <img src="{{ url_for('static', filename='images/icon/logo.png') }}" alt="CoolAdmin"/>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="/dashboard">
+                                <i class="fas fa-tachometer-alt"></i><b>Dashboard</b></a>
+                        </li>
+                        <li>
+                            <a href="/company" style="color: #0062cc">
+                                <i class="fas fa-building" style="color: #0062cc"></i>Company</a>
+                        </li>
+                        <li>
+                            <a href="/user-information">
+                                <i class="fas fa-user-circle"></i>User</a>
+                        </li>
+                        <li>
+                            <a href="/profile">
+                                <i class="far fa-user"></i>Profile</a>
+                        </li>
+                        <li>
+
+                            <a href="/product">
+                                <i class="fab fa-product-hunt"></i>Product</a>
+                            <div style="padding-left: 9%">
+                            <ul>
+                                <p>
+                                    <a href="product-add"><i class="zmdi zmdi-plus-circle"></i>Add product</a>
+                                </p>
+                            </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/order">
+                                <i class="fab fa-first-order"></i>Order</a>
+                        </li>
+
+                        <li>
+                            <a href="/report" >
+                                <i class="fas fa-file"></i>Report</a>
+                            <div style=" padding-left: 9%">
+
+                            <ul>
+                                <p>
+                                    <a href="/stock"><i class="zmdi zmdi-money-box"></i>Stock</a>
+                                </p>
+                                <p>
+                                    <a href="/itemSaleSummary"><i class="zmdi zmdi-chart"></i>Item Sale Summary</a>
+                                </p>
+
+                            </ul>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/admin-setting">
+                                <i class="fas fa-cog"></i>Setting</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <!-- END HEADER MOBILE-->
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/icon/logo.png') }}" alt="Admin"/>
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+
+                    <ul class="list-unstyled navbar__list">
+
+                        <li>
+                            <a href="/dashboard">
+                                <i class="fas fa-tachometer-alt"></i><b>Dashboard</b></a>
+                        </li>
+
+                        <li>
+                            <a href="/company" style="color: #0062cc">
+                                <i class="fas fa-building" style="color: #0062cc"></i>Company</a>
+                        </li>
+                        <li>
+                            <a href="/user-information">
+                                <i class="fas fa-user-circle"></i>User</a>
+                        </li>
+                        <li>
+                            <a href="/profile">
+                                <i class="far fa-user"></i>Profile</a>
+                        </li>
+                        <style>
+                        #myid31{
+                            display: none;
+                        }
+                        #myid11:hover #myid31{
+                            display: block;
+                        }
+                        #myid31{
+                            padding-left: 15%;
+                        }
+                        </style>
+                        <li id="myid11">
+
+                            <a href="/product">
+                                <i class="fab fa-product-hunt"></i>Product</a>
+                            <div id="myid31">
+                            <ul  id="myid21" >
+                                <p>
+                                    <a href="/product-add"><i class="zmdi zmdi-plus-circle"></i>Add product</a>
+                                </p>
+                            </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/order">
+                                <i class="fab fa-first-order"></i>Order</a>
+                        </li>
+                        <style>
+                        #myid3{
+                            display: none;
+                        }
+                        #myid1:hover #myid3{
+                            display: block;
+                        }
+                        #myid3{
+                            padding-left: 15%;
+                        }
+                        </style>
+                        <li id="myid1">
+                            <a href="/report" >
+                                <i class="fas fa-file"></i>Report</a>
+                            <div id="myid3">
+
+                            <ul  id="myid2" >
+                                <p>
+                                    <a href="/stock"><i class="zmdi zmdi-money-box"></i>Stock</a>
+                                </p>
+                                <p>
+                                    <a href="/itemSaleSummary"><i class="zmdi zmdi-chart"></i>Item Sale Summary</a>
+                                </p>
+
+                            </ul>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/admin-setting">
+                                <i class="fas fa-cog"></i>Setting</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section_content section_content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" style="visibility: hidden" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                       placeholder="Search for datas &amp; reports..."/>
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap" style="visibility: hidden">
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-comment-more"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="mess-dropdown js-dropdown">
+                                            <div class="mess__title">
+                                                <p>You have 2 news message</p>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="{{ url_for('static', filename='images/icon/avatar-06.jpg') }}"
+                                                         alt="Michelle Moreno"/>
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Michelle Moreno</h6>
+                                                    <p>Have sent a photo</p>
+                                                    <span class="time">3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="{{ url_for('static', filename='images/icon/avatar-04.jpg') }}"
+                                                         alt="Diane Myers"/>
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Diane Myers</h6>
+                                                    <p>You are now connected on message</p>
+                                                    <span class="time">Yesterday</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__footer">
+                                                <a href="#">View all messages</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-email"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="email-dropdown js-dropdown">
+                                            <div class="email__title">
+                                                <p>You have 3 New Emails</p>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="{{ url_for('static', filename='images/icon/avatar-06.jpg') }}"
+                                                         alt="Cynthia Harvey"/>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, 3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="{{ url_for('static', filename='images/icon/avatar-05.jpg') }}"
+                                                         alt="Cynthia Harvey"/>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, Yesterday</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="{{ url_for('static', filename='images/icon/avatar-04.jpg') }}"
+                                                         alt="Cynthia Harvey"/>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, April 12,,2018</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__footer">
+                                                <a href="#">See all emails</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-notifications"></i>
+                                        <span class="quantity">3</span>
+                                        <div class="notifi-dropdown js-dropdown">
+                                            <div class="notifi__title">
+                                                <p>You have 3 Notifications</p>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c1 img-cir img-40">
+                                                    <i class="zmdi zmdi-email-open"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a email notification</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c2 img-cir img-40">
+                                                    <i class="zmdi zmdi-account-box"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Your account has been blocked</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c3 img-cir img-40">
+                                                    <i class="zmdi zmdi-file-text"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a new file</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__footer">
+                                                <a href="#">All notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="{{ url_for('static', filename='images/icon/avator110.png') }}"
+                                                 alt="Admin"/>
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">{{firstName+' '+lastName}}</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                        <img src="{{ url_for('static', filename='images/icon/avator110.png') }}"
+                                                             alt="Admin"/>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                      {{firstName+' '+lastName}}
+                                                    </h5>
+                                                    <span class="email">{{admin_email}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="/logout">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            {{ msg }}
+
+            <!--This is the body created by html+CSS-->
+            <div  style="margin: 0 auto ; padding-top: 60px;padding-left: 10px; padding-right: 10px">
+                <div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <br><br><br><br>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAADr6+uWlpb09PT39/cSEhIcHBwgICAFBQUYGBiRkZH7+/uYmJjv7+/x8fGgoKAzMzMUFBSKioooKCilpaUvLy/j4+MjIyP5XszQAAAEJUlEQVR4nO2d65KjIBBGo4kaTXQyyWx23v9Jt1JbQlOiaNsg4nd+djWGkxuNKJ5OAAAAAAAGXSbE1iKjdCUMYQjDrYEhDKMyvNuC+bPvYs1i2tD6kt64TX8G17/3Yjknxyd7Dml4dhjmrKM6DFthiUlgCEM7MBSWmOTwhlVChmXVDHm+mYaWYzVVua3hq/iywTuq9VDFbVvDAHVGC0MvwFASGPoBhpLEYljYx0NzaGMlx2Jo1HG/fU2T/9KwSm5pVJ+zMKKPQfLGhsZ5DVWX5lcavg06vVvDKwxhCEP/HN5Q/5dW6Ri25VXzrQy/SbRUXXzUJEwMSbT+o44cieElp6hEI3phJcdi6A8Y+gGGksDQDzCUJBbD9MfDNqsUzVvXNI0O6y4+SHJFahoaja6mSb8uPdjcAoYwhGEAjvhf2ma2dfz8/dRhOh6ShXpiSKPRjYcFrUc6ldjRcGFNHqlpolu38AcM/QBDSWDoBxhKEoth+uNh+usW6delB5tbwBCGMAwAromyG+77urb7haISjeh9XXLQGxBD1qXbAMP9A8P9A8P942c8tGMmz8GP4S0rNT+qpvmpdZTWNCTZtYOCkTyHa+c4IteQwJzjjxkupAxgyJxbwBCGMITh0Q1fxosoQyOqDM3tbdRR7zZcuxsMeebWI601lMDRc8dZDPP7MmRZV2HIA4bTrWEIQxMY8ji84W26de5ovtZwTk3z6pNHapphRABV9K01FF1dWynl6CqzGQxh+AGGLGA4u1n6htGOh2KGEkw4G1+BRe/mngxVXbroFwHDEWDIA4Z9FIbJGtpXY/dk6FpvbvwaSqxbDCMjCw/2sD2KunR2MxjC8AMMWcBwdjPR+55WSjm6ymw2dl0bvYDNdV3b0NC+Ej+yPm8PixlKXJs48amOf19K9W4az2LaZdWWfl2KuQUMF/UFhjxg2EcXVRexj4d0jzp9v15t3f3uTXa/q1XHgtals+8/VJGOojcsoFHy4AFrsu+6NNXKO/25BQxhuFLK0VVms4MZJjnHF9mfZmAY03gosceQ5VOlTwtWb9CZhDNyxoSG5WsaCSa+tx8wx091bgFDGI4AQx4sQ99z/NdXLkIxYkj3qCNzfB2tSHVRkeR20FWmofV5wMv5f4ZiaGi8C7wHD6w1lGLEUAAYwhCGMIThZobGg2IEiG88NF9DgIvdcLuaxg8WQ0rQutQPLENPcws/wLCPwhCG28Ey3Pt/Kb3Cj+y7S8J6Hd9+lWDkhjPWLTpHcuSGAsAwKDBkAcOgwJBF5IY5GeHoIrlzPMz3Mh5ijp/tvy51G6Y/t4AhDIMCwz4a4pooP7AMGz/34/thaFhQ9M0MRtiRHLmhADAMCgxZwDAoMGQRqWEhhi4PojKsBcmiNPQCDEMAQxjCcHtguA7HtvwAAAAASJl/onWNt9IaU8IAAAAASUVORK5CYII=" alt=""/>
+                        <h3>Company</h3>
+                        <p>You can change your company details which will be updated in the offline file</p>
+
+                    </div>
+                    <div class="col-md-9 register-right">
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Edit Company Detail</h3>
+
+                                 <form action="/company" method="POST">
+                                <div class="form-group" style="margin: 0 auto; padding-top: 170px; padding-left: 60px; padding-right: 10px">
+
+                                    <div class="row">
+                                    <div class="col"><label for="name" class="form-control" style="border: none; background-color: transparent">Name</label></div>
+                                    <div class="col"><input type="text" class="form-control" name="name" id="name" placeholder="Name" value="{{ companyName }}" required
+                           maxlength="15" pattern="[A-Za-z]+"
+                           title="Name should be only alphabet and can contain upto 15 characters"/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="address" class="form-control" style="border: none; background-color: transparent">Address</label></div>
+                                    <div class="col"><input type="text" class="form-control" name="address" id="address" placeholder="Address" value="{{ companyAddress }}"
+                           required maxlength="45" pattern="[A-Za-z ,0-9]+"
+                           title="Address must contain alphabets, digits, comma and space"/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="phone" class="form-control" style="border: none; background-color: transparent">Phone Number</label></div>
+                                    <div class="col"><input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" value="{{ companyPhone }}"
+                           required pattern="[0-9]{4}-[0-9]{7}"
+                           title="Phone Number must be pattern of XXXX-XXXXXXX"/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="email" class="form-control" style="border: none; background-color: transparent">Email</label></div>
+                                    <div class="col"><input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{ companyEmail }}"
+                           required/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="low-stock" class="form-control" style="border: none; background-color: transparent">Low Stock Limit</label></div>
+                                    <div class="col"><input type="number" class="form-control" style="width:100%" name="low-stock" id="low-stock"
+                           placeholder="Lower Stock Limit" value={{ companyLow }} required min=0 max=100000/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="excess-stock" class="form-control" style="border: none; background-color: transparent">High Stock Limit</label></div>
+                                    <div class="col"><input type="number" class="form-control" style="width:100%" name="excess-stock" id="excess-stock" placeholder="Excess Stock Limit" value={{ companyExcess }} required min=0 max=100000/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="tax" class="form-control" style="border: none; background-color: transparent">Tax (%)</label></div>
+                                    <div class="col"><input type="number" class="form-control" style="width:100%" name="tax" id="tax" placeholder="Tax (%)" value={{ companyTax }} required min=0 max=100/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="discount" class="form-control" style="border: none; background-color: transparent">Discount (%)</label></div>
+                                    <div class="col"> <input type="number" class="form-control" style="width:100%" name="discount" id="discount" placeholder="Discount (%)" value={{ companyDiscount }} required min=0 max=100/></div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col"><label for="shipping" class="form-control" style="border: none; background-color: transparent">Shipping Fee For Each Quantity (Rs)</label></div>
+                                    <div class="col"><input type="number" class="form-control" style="width:100%" name="shipping" id="shipping" placeholder="Shipping Fee For Each Quantity (Rs)" value="{{ companyShipping }}" required min=0 max=100000/></div>
+                                    </div>
+                                    <br>
+                                    <input type="submit" class="btnRegister" id="submit-btn" value="Save changes"/>
+                                    <br><br><br>
+                                </div>
+                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            <!--HTML+CSS body end-->
+
+        </div>
+
+    </div>
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='vendor/jquery-3.2.1.min.js') }}"></script>
+    <!-- Bootstrap JS-->
+
+    <script src="{{ url_for('static', filename='vendor/bootstrap-4.1/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
+
+    <!-- Vendor JS       -->
+
+    <script src="{{ url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/animsition/animsition.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/counter-up/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/counter-up/jquery.counterup.min.js') }}"></script>
+    <script src=""></script>
+    <script src="{{ url_for('static', filename='vendor/circle-progress/circle-progress.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/chartjs/Chart.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

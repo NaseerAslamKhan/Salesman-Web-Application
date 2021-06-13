@@ -1,0 +1,979 @@
+    <!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Place favicon.ico in the root directory -->
+     <link rel="shortcut icon" type="image/x-icon"
+          href={{ url_for('static',filename='home/images/favicon.ico') }}>
+    <link rel="apple-touch-icon" type="image"
+          href={{ url_for('static',filename='home/apple-touch-icon.png') }}>
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/bootstrap.min.css') }}>
+    <!-- Owl Carousel main css -->
+       <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/owl.theme.default.min.css') }}>
+      <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/core.css') }}>
+
+
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/shortcode/shortcodes.css') }}>
+
+    <!-- Theme main style -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/style.css') }}>
+  <!-- Responsive css -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/responsive.css') }}>
+
+    <!-- User style -->
+    <link rel="stylesheet" type="text/css"
+          href={{ url_for('static',filename='home/css/custom.css') }}>
+
+    <!-- Modernizr JS -->
+    <script src="static/home/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->  
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 bg__white">
+            <style>
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    right: 0;
+   display: none;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.myHref:hover{
+    color: red;
+}
+</style>
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="/index">
+                                    <img class="w3-animate-left" src="static/images/ace-logo.png" style="width: 130px" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6 w3-animate-right">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="/index">Home</a></li>
+                                    <li class="drop"><a href="/men">Men</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/men#jump-men-casual">Casual <span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">T-Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pants</a>
+                                                    <a href="">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="/men#jump-men-formal">Formal<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shalwar Kameez</a>
+                                                    <a href="">
+                                                        <img src="static/images/menShalwarKameezCover.jpg" style="width: 120px; height: 160px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pant Coat</a>
+                                                    <a href="">
+                                                        <img src="static/images/menPentCoatCover.jpg" style="width: 120px; height: 160px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="/women">Women</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/women#jump-women-shalwar-kameez">Shalwar Kameez<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Two Piece</a>
+                                                    <a href="">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Three Piece</a>
+                                                    <a href="">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/women#jump-women-abaya">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="/kids">Kids</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/kids#jump-kids-boys">Boys<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Shirts</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Pants</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Kurta & Pajama</a>
+                                                    <a href="">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/kids#jump-kids-girls">Girls<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="">Kurti</a>
+                                                    <a href="">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Jeans</a>
+                                                    <a href="">
+                                                        <img src="static/images/girlsJeansCover.jpg" style="width: 130px; height: 170px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                    <li class="drop"><a href="index.html">Home</a></li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Men</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Casual</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">T-Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pants</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="drop"><a href="single-portfolio.html">Formal</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shalwar Kameez</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShalwarKameezCover.jpg" style="width: 120px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pent Coat</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCoatCover.jpg" style="width: 130px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Women</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Shalwar Kameez</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Two Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Three Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="single-portfolio.html">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Kids</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Boys</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pents</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Kurta & Pajama</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li class="drop"><a href="single-portfolio.html">Girls</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Kurti</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Jeans</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsJeansCover.jpg" style="width: 130px; height: 170px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- End MAinmenu Ares -->
+
+                        <div  class="col-md-2 col-sm-4 col-xs-3 w3-animate-right">
+                            <ul class="menu-extra">
+                                <div class="dropdown" style="padding: 0">
+<li class="dropbtn" onclick="myFunction1()">
+    {%if login_email  %}
+        <span class="ti-user"></span>
+    {%endif  %}
+
+    {%if not_login  %}
+        <a href="/login-register"><span class="ti-user"></span></a>
+    {%endif  %}
+
+    <div class="dropdown-content" id="text1">
+        <a>{{login_email}}</a>
+        <a class="myHref" href="/user-profile">
+            <i class="zmdi zmdi-account"></i>
+            <i class="zmdi zmdi-account" style="visibility: hidden"></i>
+            Account
+        </a>
+        <a class="myHref" href="/user-setting">
+            <i class="zmdi zmdi-settings"></i>
+            <i class="zmdi zmdi-settings" style="visibility: hidden"></i>
+            Setting
+        </a>
+        <a class="myHref" href="/logout">
+            <i class="zmdi zmdi-power"></i>
+            <i class="zmdi zmdi-power" style="visibility: hidden"></i>
+            Logout
+        </a>
+    </div>
+</li>
+                                </div>
+                                <li class="cart__menu" style="visibility: hidden; padding: 0"><span class="ti-shopping-cart"></span></li>
+                                <li  style="padding: 0">
+                                    {%if login_email  %}
+                                        <a href="/cart"><span style="color: red;" class="ti-shopping-cart"></span></a>
+                                    {%endif  %}
+
+                                    {%if not_login  %}
+                                        <a href="/login-register-cart-view"><span class="ti-shopping-cart"></span></a>
+                                    {%endif  %}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {%if login_email  %}
+        <script>
+    function myFunction1() {
+         var x = document.getElementById("text1");
+         if (x.style.display === "block") {
+             x.style.display = "none";
+         } else {
+             x.style.display = "block";
+         }
+    }
+</script>
+    {%endif  %}
+
+                    <div class="mobile-menu-area">
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="w3-animate-left" src="static/images/ace-logo.png" style="width: 130px" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6 w3-animate-right">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="index.html">Home</a></li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Men</a>
+                                        <ul class="dropdown">
+                                            <li><a href="portfolio-card-box-2.html">Casual <span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">T-Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pants</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="single-portfolio.html">Formal<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shalwar Kameez</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://cdn.shopify.com/s/files/1/1151/4330/products/M156MSF34470609S_large.jpg?v=1497950604" style="width: 120px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pent Coat</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/608x608/products/7688/70183/2018-men-s-fashion-Slim-suits-men-s-business-casual-clothing-groomsman-three-piece-suit-Blazers__92589.1527763577.jpg?c=2" style="width: 130px; height: 130px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Sherwani</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyykg48T_rAI2Sz0ogPLdxTbwfZNEdQaHxqFHqu85R3OrMhwaaJz_QmkC60cVBQ6p1yxs&usqp=CAU" style="width: 120px; height: 125px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Women</a>
+                                        <ul class="dropdown">
+                                            <li><a href="portfolio-card-box-2.html">Shalwar Kameez<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Two Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Three Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="single-portfolio.html">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Kids</a>
+                                        <ul class="dropdown">
+                                            <li><a href="portfolio-card-box-2.html">Boys<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pents</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Kurta & Pajama</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="single-portfolio.html">Girls<span><i class="zmdi zmdi-chevron-right"></i></span></a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Kurti</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                    <li class="drop"><a href="index.html">Home</a></li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Men</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Casual</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">T-Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menTShirtCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pants</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/menPentCover.jpg" style="width: 170px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="drop"><a href="single-portfolio.html">Formal</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shalwar Kameez</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://cdn.shopify.com/s/files/1/1151/4330/products/M156MSF34470609S_large.jpg?v=1497950604" style="width: 120px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pent Coat</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/608x608/products/7688/70183/2018-men-s-fashion-Slim-suits-men-s-business-casual-clothing-groomsman-three-piece-suit-Blazers__92589.1527763577.jpg?c=2" style="width: 130px; height: 130px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Sherwani</a>
+                                                    <a href="shop.html">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyykg48T_rAI2Sz0ogPLdxTbwfZNEdQaHxqFHqu85R3OrMhwaaJz_QmkC60cVBQ6p1yxs&usqp=CAU" style="width: 120px; height: 125px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Women</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Shalwar Kameez</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Two Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women2PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Three Piece</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/women3PeiceCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="single-portfolio.html">Abaya</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Kids</a>
+                                        <ul class="dropdown">
+                                            <li class="drop"><a href="portfolio-card-box-2.html">Boys</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Shirts</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyShirtCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Pents</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyPentCover.jpg" style="width: 130px; height: 120px" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="customer-review.html">Kurta & Pajama</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/BoyKurtaCover.jpg" style="width: 110px; height: 150px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li class="drop"><a href="single-portfolio.html">Girls</a>
+                                            <ul class="lavel-dropdown mega_dropdown">
+                                                <li>
+                                                    <a href="customer-review.html">Kurti</a>
+                                                    <a href="shop.html">
+                                                        <img src="static/images/girlsKurtiCover.jpg" style="width: 130px; height: 180px" alt="">
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">contact us</a></li>
+                                </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- End MAinmenu Ares -->
+                        <div  class="col-md-2 col-sm-4 col-xs-3 w3-animate-right">
+                            <ul class="menu-extra">
+                                <li><a href="login-register.html"><span class="ti-user"></span></a></li>
+                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Style -->
+        
+        <div class="body__overlay"></div>
+        <!-- Start Offset Wrapper -->
+        <div class="offset__wrapper">
+            <!-- Start Search Popap -->
+            <!-- Start Cart Panel -->
+            <div class="shopping__cart">
+                <div class="shopping__cart__inner">
+                    <div class="offsetmenu__close__btn">
+                        <a href="#"><i class="zmdi zmdi-close"></i></a>
+                    </div>
+                    {% for u in list %}
+                    <div class="shp__cart__wrap">
+                        <div class="shp__single__product">
+                            <div class="shp__pro__thumb">
+                                <a href="#">
+                                    <img src="{{u[4]}}" alt="product images">
+                                </a>
+                            </div>
+                            <div class="shp__pro__details">
+                                <h2><a href="product-details.html">{{u[5]}}</a></h2>
+                                <span class="quantity">{{u[9]}}</span>
+                                <span class="shp__price">{{u[7]}}</span>
+                            </div>
+                            <div class="remove__btn">
+                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <ul class="shoping__total">
+                        <li class="subtotal">Subtotal:</li>
+                        <li class="total__price">$130.00</li>
+                    </ul>
+                    <ul class="shopping__btn">
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li class="shp__checkout"><a href="checkout.html">Confirm Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Cart Panel -->
+        </div>
+        <!-- End Offset Wrapper -->
+        <!-- Start Bradcaump area -->
+        <style>
+            #cartcover {
+              background-image: url('https://thumbs.dreamstime.com/b/christmas-holidays-sale-online-store-fast-delivery-copy-space-gift-box-shopping-cart-banner-205238583.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+        </style>
+        <div class="ht__bradcaump__area" id="cartcover" >
+            <div class="ht__bradcaump__wrap" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">Cart</h2>
+                                <nav class="bradcaump-inner">
+                                  <a class="breadcrumb-item" href="index.html">Home</a>
+                                  <span class="brd-separetor">/</span>
+                                  <span class="breadcrumb-item active">Cart</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- cart-main-area start -->
+        <div class="cart-main-area ptb--100 bg__white" style="padding: 4%; background-color: #F1F1F1">
+            <div class="container">
+                <div class="row">
+                    <div class="bradcaump-title">Cart Details</div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12" >
+                {%if errorMsg  %}
+                    <div class="alert alert-danger">
+                        <strong style="text-transform: capitalize">{{itemName}}! </strong>Only {{itemQty}} items available.
+                    </div>
+                {%endif  %}
+                {%if errorMsg2  %}
+                    <div class="alert alert-danger">
+                        Only {{itemQty}} items available.
+                    </div>
+                {%endif  %}
+                            <div class="table-content table-responsive">
+                                <table >
+                                    <thead>
+                                        <tr>
+                                            <th class="product-thumbnail">Image</th>
+                                            <th class="product-name">Product</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Total</th>
+                                            <th class="product-remove">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for u in list %}
+                                        <tr>
+                                            <iframe name="hiddenFrame" class="hide"></iframe>
+                                            <td class="product-thumbnail"><a href="#"><img src="{{u[4]}}" alt="product img" /></a></td>
+                                            <td class="product-name"><a href="#">{{ u[5] }}</a></td>
+                                            <td class="product-price"><span class="amount">PKR{{ u[7] }}.00</span></td>
+                                            <td class="product-quantity">
+                                            <form action="/cart" method="POST" class="auto_submit_form">
+                                                <input type="number" name="qty" value="{{u[9]}}"/>
+                                                <input type="hidden" name="bag-id" value="{{ u[1] }}"/>
+                                                <input type="hidden" name="max-qty" value="{{ u[8] }}"/>
+                                            </form>
+                                            </td>
+                                            <td class="product-subtotal">PKR{{ u[10] }}.00</td>
+
+                                            <td class="product-remove">
+                                                <form action="/deleteFromCart" method="POST" style ="display:inline;">
+                                                    <button class="btn btn-primary-outline" name="bag-id" value="{{ u[1] }}" >X</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                    <div class="buttons-cart">
+                                        <a href="/index">Continue Shopping</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12">
+                                    <div class="cart_totals">
+                                        <h2>Cart Totals</h2>
+                                        <br><br>
+                                        <table>
+                                            <tbody>
+                                            <tr class="cart-total">
+                                                    <th>Total</th>
+                                                    <td>
+                                                        <strong><span class="amount">PKR{{totalAmount}}</span></strong>
+                                                    </td>
+                                                </tr>
+                                            <tr class="shipping">
+                                                    <th>Shipping</th>
+                                                    <td>
+                                                        <strong><span class="amount">PKR{{shipping}}</span></strong>
+                                                    </td>
+                                                </tr>
+                                            <tr class="tax">
+                                                    <th>Tax ({{company.tax}}%)</th>
+                                                    <td>
+                                                        <strong><span class="amount">PKR{{tax}}</span></strong>
+                                                    </td>
+
+                                                </tr>
+                                            <tr class="discount">
+                                                    <th>Discount  ({{company.discount}}%)</th>
+                                                    <td>
+                                                        <strong><span class="amount">PKR{{discount}}</span></strong>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="order-total">
+                                                    <th>SubTotal</th>
+                                                    <td>
+                                                        <strong><span class="amount">PKR{{subtotal}}.00</span></strong>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <div class="wc-proceed-to-checkout" style="margin: 0">
+                                            <a href="/confirm-order">Confirm Order</a>
+                                        </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- cart-main-area end -->
+        <!-- Start Footer Area -->
+        <footer class="htc__footer__area gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="footer__container clearfix">
+                         <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-4 col-sm-6">
+                            <div class="ft__widget">
+                                <div class="ft__logo">
+                                    <h2>Need Help</h2>
+                                </div>
+                                <div class="footer-address">
+                                    <ul>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-pin"></i>
+                                            </div>
+                                            <div class="address-text">
+                                                <p>{{company.address}}</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-email"></i>
+                                            </div>
+                                            <div class="address-text">
+                                            <p>{{company.email}}</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="address-icon">
+                                                <i class="zmdi zmdi-phone-in-talk"></i>
+                                            </div>
+                                            <div class="address-text">
+                                                <p>{{company.phone}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-2 col-sm-6 smt-30 xmt-30">
+                            <div class="ft__widget">
+                                <h2 class="ft__title">Categories</h2>
+                                <ul class="footer-categories">
+                                    <li><a href="/men">Men</a></li>
+                                    <li><a href="/women">Women</a></li>
+                                    <li><a href="/kids">Kids</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Start Single Footer Widget -->
+                        <!-- Start Single Footer Widget -->
+                        <div class="col-md-4 col-lg-2 col-lg-offset-1 col-sm-6 smt-30 xmt-30">
+                            <div class="ft__widget">
+                                <h2 class="ft__title">Follow Us</h2>
+                                <ul class="social__icon">
+                                    <li><a href="https://twitter.com/usmanjavaid08?s=09"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/usman_javaid01/"><i class="zmdi zmdi-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/offical.usman.005/"><i class="zmdi zmdi-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Footer Widget -->
+                    </div>
+                </div>
+                <!-- Start Copyright Area -->
+                <div class="htc__copyright__area">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="copyright__inner">
+                                <div class="copyright">
+                                    <p>© 2021 <a href="/index">ACE</a>
+                                    All Right Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Copyright Area -->
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+    </div>
+    <!-- Body main wrapper end -->
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- jquery latest version -->
+    <script src="static/home/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="static/home/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="static/home/js/plugins.js"></script>
+    <script src="static/home/js/slick.min.js"></script>
+    <script src="static/home/js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="static/home/js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="static/home/js/main.js"></script>
+
+    <script>
+        $(function() {
+  $(".auto_submit_form").change(function() {
+    this.submit();
+  });
+});
+    </script>
+</body>
+
+</html>
